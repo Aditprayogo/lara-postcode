@@ -1,5 +1,7 @@
 <?php
 
+use App\Provinsi;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
