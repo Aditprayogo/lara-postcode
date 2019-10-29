@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Provinsi;
+
 class ProvinsiController extends Controller
 {
     /**
@@ -13,7 +15,10 @@ class ProvinsiController extends Controller
      */
     public function index()
     {
-        //
+		//
+		$provinsis = Provinsi::all();
+
+		return view('provinsi.index', compact('provinsis'));
     }
 
     /**

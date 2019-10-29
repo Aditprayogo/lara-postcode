@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('main');
 });
 
+Route::resource('provinsi', 'ProvinsiController');
+
 
