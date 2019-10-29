@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Provinsi;
-use App\PostalCode;
 
-class ProvinsiController extends Controller
+use App\PostalCode;
+use App\Provinsi;
+
+class CityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +17,9 @@ class ProvinsiController extends Controller
      */
     public function index()
     {
-		//
-		$provinsis = Provinsi::all();
+        $postalcodes = PostalCode::paginate(50);
 
-		return view('provinsi.index', compact('provinsis'));
+		return view('city.index', compact('postalcodes'));
     }
 
     /**
@@ -51,7 +51,12 @@ class ProvinsiController extends Controller
      */
     public function show($id)
     {
-        //
+		$postalCodes = PostalCode::where('province_code', $id)->get();
+
+		
+		
+		
+		return view('city.show', compact('postalCodes'));
     }
 
     /**

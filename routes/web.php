@@ -14,9 +14,10 @@ use App\Provinsi;
 */
 
 Route::get('/', function () {
-    return view('main');
+    return view('provinsi.index');
 });
 
 Route::resource('provinsi', 'ProvinsiController');
 
+Route::resource('city', 'CityController');
 
