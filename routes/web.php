@@ -21,3 +21,4 @@ Route::resource('provinsi', 'ProvinsiController');
 
 Route::resource('city', 'CityController');
 
+Route::resource('kecamatan', 'KecamatanController');

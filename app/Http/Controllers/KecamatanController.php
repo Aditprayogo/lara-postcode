@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\PostalCode;
+
 class KecamatanController extends Controller
 {
     /**
@@ -13,7 +15,10 @@ class KecamatanController extends Controller
      */
     public function index()
     {
-        //
+		//
+		$postalcodes = PostalCode::paginate(1000);
+		
+		return view('kecamatan.index', compact('postalcodes'));
     }
 
     /**
@@ -34,7 +39,9 @@ class KecamatanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		//
+		
+
     }
 
     /**
@@ -45,7 +52,10 @@ class KecamatanController extends Controller
      */
     public function show($id)
     {
-        //
+	
+		$postalCodes = PostalCode::where('province_code', $id)->get();
+
+		return view('kecamatan.show', compact('postalCodes'));
     }
 
     /**
