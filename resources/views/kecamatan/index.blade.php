@@ -5,8 +5,7 @@
 <table class="table table-bordered" id="myTable">
     <thead>
       <tr>
-        <th scope="col">No</th>
-        
+        <th scope="col">No</th>     
         <th scope="col">Kecamatan</th>
         <th scope="col">Desa</th>
         <th scope="col">Kode Pos</th>
