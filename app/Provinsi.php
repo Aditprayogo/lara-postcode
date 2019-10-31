@@ -18,6 +18,6 @@ class Provinsi extends Model
 	public function postals()
 	{
 		# code...
-		return $this->hasMany('App\PostalCode', 'province_code', 'province_code');
+		return $this->hasMany('App\PostalCode', 'province_code');
 	}
 }

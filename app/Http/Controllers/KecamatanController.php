@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Provinsi;
-use App\PostalCode;
-
-class ProvinsiController extends Controller
+class KecamatanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +13,7 @@ class ProvinsiController extends Controller
      */
     public function index()
     {
-		
-		$provinsis = Provinsi::all();
-
-		return view('provinsi.index', compact('provinsis'));
+        //
     }
 
     /**

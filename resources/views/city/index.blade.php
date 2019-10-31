@@ -7,22 +7,21 @@
       <tr>
         <th scope="col">No</th>
         <th scope="col">City</th>
-        <th scope="col">Kode pos</th>
+        <th scope="col">Kecamatan</th>
+        <th scope="col">Desa</th>
       </tr>
     </thead>
 
     <?php $i = 1; ?>
     <tbody>
-    @if ($postalcodes)
-        @foreach ($postalcodes as $postalcode) 
-            <tr>
-                <th scope="row">{{$i++}}</th>
-                <td>{{$postalcode->city}}</td>
-                <td>{{$postalcode->postal_code}}</td>
-               
-            </tr>  
+        @foreach ($postalcodes as $postal)
+        <tr>
+            <th scope="row">{{$i++}}</th>
+            <td>{{$postal->city}}</td>
+            <td>{{$postal->sub_district}}</td>
+            <td>{{$postal->urban}}</td>
+        </tr>  
         @endforeach
-    @endif
     </tbody>
 </table>
     
