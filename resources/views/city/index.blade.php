@@ -2,6 +2,11 @@
 
 @section('content')
 
+<h1>Daftar Kota untuk Semua Provinsi Di Indonesia</h1>
+
+<hr>
+
+
 <table class="table table-bordered" id="myTable">
     <thead>
       <tr>
@@ -17,7 +22,7 @@
         @foreach ($postalcodes as $postal)
         <tr>
             <th scope="row">{{$i++}}</th>
-            <td>{{$postal->city}}</td>
+            <td><a href="{{route('kecamatan.show', [$postal->province_code])}}">{{$postal->city}}</a></td>
             <td>{{$postal->sub_district}}</td>
             <td>{{$postal->urban}}</td>
         </tr>  

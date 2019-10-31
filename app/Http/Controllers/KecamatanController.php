@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\PostalCode;
+use App\Provinsi;
 
 class KecamatanController extends Controller
 {
@@ -52,10 +53,10 @@ class KecamatanController extends Controller
      */
     public function show($id)
     {
-	
-		$postalCodes = PostalCode::where('province_code', $id)->get();
 
-		return view('kecamatan.show', compact('postalCodes'));
+		$kecamatans = PostalCode::where('province_code', $id)->get();
+
+		return view('kecamatan.show', compact('kecamatans'));
     }
 
     /**

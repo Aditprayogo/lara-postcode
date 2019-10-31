@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <table class="table table-bordered" id="myTable">
     <thead>
       <tr>

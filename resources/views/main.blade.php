@@ -98,7 +98,7 @@
                     <a href="{{route('city.index')}}">Kota</a>
                   </li>
                   <li>
-                    <a href="#">Freebies</a>
+                    <a href="{{route('kecamatan.index')}}">Kecamatan</a>
                   </li>
                 </ul>
               </div>

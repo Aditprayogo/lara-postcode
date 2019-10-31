@@ -19,6 +19,8 @@ class ProvinsiController extends Controller
 		
 		$provinsis = Provinsi::all();
 
+	
+
 		return view('provinsi.index', compact('provinsis'));
     }
 

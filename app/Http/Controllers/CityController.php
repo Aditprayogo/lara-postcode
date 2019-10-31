@@ -17,7 +17,7 @@ class CityController extends Controller
      */
     public function index()
     {
-		$postalcodes = PostalCode::paginate(1000);
+		$postalcodes = PostalCode::paginate(7000);
 		
 		return view('city.index', compact('postalcodes'));
     }
@@ -51,9 +51,12 @@ class CityController extends Controller
      */
     public function show($id)
     {
+
+		$province = Provinsi::findOrFail($id);
+
 		$postalCodes = PostalCode::where('province_code', $id)->get();
 
-		return view('city.show', compact('postalCodes'));
+		return view('city.show', compact('postalCodes', 'province'));
     }
 
     /**

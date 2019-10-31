@@ -11,5 +11,10 @@ class PostalCode extends Model
 
 	public $timestamps = false;
 
+	public function provinsi()
+	{
+		# code...
+		return $this->belongsTo('App\Provinsi', 'province_code', 'province_code');
+	}
 	
 }
