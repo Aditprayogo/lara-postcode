@@ -62,14 +62,14 @@
 
     <div class="row mt-5">
 
-      <div class="col-md-9">
+      <div class="col-md-8">
 
         @yield('content')
 
       </div>
 
       <!-- Sidebar Widgets Column -->
-      <div class="col-md-3">
+      <div class="col-md-4">
 
         <!-- Search Widget -->
         <div class="card my-4">

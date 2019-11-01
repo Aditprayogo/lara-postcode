@@ -4,6 +4,8 @@
 
 <h1>Kecamatan untuk Kota {{$city}}</h1>
 
+<hr>
+
 <table class="table table-bordered" id="myTable">
     <thead>
       <tr>

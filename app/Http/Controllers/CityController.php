@@ -54,7 +54,9 @@ class CityController extends Controller
 
 		$province = Provinsi::findOrFail($id);
 
-		$postalCodes = PostalCode::where('province_code', $id)->get();
+		$postalCodes = PostalCode::where('province_code', $id)
+		->take(1000)
+		->get();
 
 		return view('city.show', compact('postalCodes', 'province'));
     }

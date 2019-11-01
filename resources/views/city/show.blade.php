@@ -3,13 +3,16 @@
 @section('content')
 
 
+<h1>Daftar Kota Untuk Provinsi {{$province->province_name}}</h1>
+
+<hr>
+
 <table class="table table-bordered" id="myTable">
     <thead>
       <tr>
         <th scope="col">No</th>
         <th scope="col">City</th>
-        <th scope="col">Kecamatan</th>
-        <th scope="col">Desa</th>
+      
       </tr>
     </thead>
 
@@ -21,11 +24,6 @@
             <td>
                 <a href="{{route('kecamatan.show', ['id' => $postal->province_code, 'cityname' => $postal->city])}}">{{$postal->city}}</a>
             </td>
-            <td>
-                {{$postal->sub_district}}
-               
-            </td>
-            <td>{{$postal->urban}}</td>
         </tr>  
         @endforeach
     </tbody>

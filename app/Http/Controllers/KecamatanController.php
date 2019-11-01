@@ -54,7 +54,11 @@ class KecamatanController extends Controller
     public function show($id, $cityname)
     {
 
-		$postalcodes = PostalCode::where('province_code', $id)->where('city', $cityname)->get();
+		$postalcodes = PostalCode::where('province_code', $id)
+		->where('city', $cityname)
+		->orderBy('urban', 'asc')
+		->take(1000)
+		->get();
 
 		$city = $cityname;
 
