@@ -2,6 +2,8 @@
 
 @section('content')
 
+<h1>Nama Desa Untuk Kecamatan {{$namaKecamatan}}</h1>
+
 <table class="table table-bordered" id="myTable">
     <thead>
       <tr>

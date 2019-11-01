@@ -23,7 +23,7 @@
             <th scope="row">{{$i++}}</th>
            
             <td>
-                <a href="{{route('desa.show', [$postal->province_code])}}">{{$postal->sub_district}}</a>
+                <a href="{{route('desa.show', ['id' => $postal->province_code, 'kecamatan' => $postal->sub_district])}}">{{$postal->sub_district}}</a>
             </td>
             <td>{{$postal->urban}}</td>
             <td>{{$postal->postal_code}}</td>

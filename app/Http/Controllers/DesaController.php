@@ -47,11 +47,17 @@ class DesaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $kecamatan)
     {
-		$desas = PostalCode::where('province_code', $id)->orderBy('urban', 'desc')->take(100)->get();
+		$desas = PostalCode::where('province_code', $id)
+		->where('sub_district', $kecamatan)
+		->get()
+		->take(1000);
 
-		return view('desa.show', compact('desas'));
+		$namaKecamatan = $kecamatan;
+		
+
+		return view('desa.show', compact('desas', 'namaKecamatan'));
     }
 
     /**
