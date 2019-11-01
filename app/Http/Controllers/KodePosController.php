@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\PostalCode;
-use App\Provinsi;
 
-class KecamatanController extends Controller
+class KodePosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +15,7 @@ class KecamatanController extends Controller
      */
     public function index()
     {
-		//
-		$postalcodes = PostalCode::paginate(1000);
-		
-		return view('kecamatan.index', compact('postalcodes'));
+        //
     }
 
     /**
@@ -40,9 +36,7 @@ class KecamatanController extends Controller
      */
     public function store(Request $request)
     {
-		//
-		
-
+        //
     }
 
     /**
@@ -51,14 +45,11 @@ class KecamatanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, $cityname)
+    public function show($id)
     {
-
-		$postalcodes = PostalCode::where('province_code', $id)->where('city', $cityname)->get();
-
-		$city = $cityname;
-
-		return view('kecamatan.show', compact('postalcodes', 'city'));
+		$postalcode = PostalCode::where('province_code', $id)->first();
+		
+		return view('postal.show', compact($postalcode));
     }
 
     /**

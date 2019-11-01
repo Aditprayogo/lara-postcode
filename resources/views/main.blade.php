@@ -62,14 +62,14 @@
 
     <div class="row mt-5">
 
-      <div class="col-md-8">
+      <div class="col-md-9">
 
         @yield('content')
 
       </div>
 
       <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
+      <div class="col-md-3">
 
         <!-- Search Widget -->
         <div class="card my-4">
@@ -100,19 +100,14 @@
                   <li>
                     <a href="{{route('kecamatan.index')}}">Kecamatan</a>
                   </li>
+                
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#">CSS</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
+                    <li>
+                        <a href="{{route('desa.index')}}">Desa</a>
+                    </li>
                 </ul>
               </div>
             </div>

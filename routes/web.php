@@ -21,4 +21,15 @@ Route::resource('provinsi', 'ProvinsiController');
 
 Route::resource('city', 'CityController');
 
-Route::resource('kecamatan', 'KecamatanController');
+Route::resource('kecamatan', 'KecamatanController')->except([
+	'show',
+]);
+
+Route::get('/kecamatan/{id}/{cityname}', [
+	'as' => 'kecamatan.show',
+	'uses' => 'KecamatanController@show'
+]);
+
+Route::resource('desa', 'DesaController');
+
+Route::resource('kodepos', 'KodePosController');

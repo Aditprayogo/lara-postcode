@@ -2,31 +2,28 @@
 
 @section('content')
 
-<h1>Kecamatan untuk Kota {{$city}}</h1>
-
 <table class="table table-bordered" id="myTable">
     <thead>
       <tr>
         <th scope="col">No</th>     
-        <th scope="col">Kecamatan</th>
+        <th scope="col">Kodepos</th>
         <th scope="col">Desa</th>
-        <th scope="col">Kode Pos</th>
+        <th scope="col">Kecamatan</th>
+        <th scope="col">Kota</th>
       </tr>
     </thead>
 
     <?php $i = 1; ?>
-    <tbody>
-        @foreach ($postalcodes as $postal)
+    <tbody>   
         <tr>
             <th scope="row">{{$i++}}</th>
-           
             <td>
-                <a href="{{route('desa.show', [$postal->province_code])}}">{{$postal->sub_district}}</a>
+                {{$postalcode->postal_code}}
             </td>
-            <td>{{$postal->urban}}</td>
-            <td>{{$postal->postal_code}}</td>
-        </tr>  
-        @endforeach
+            <td>{{$postalcode->urban}}</td>
+            <td>{{$postalcode->sub_district}}</td>
+            <td>{{$postalcode->city}}</td>
+        </tr>   
     </tbody>
 </table>
     

@@ -18,7 +18,9 @@
         <tr>
             <th scope="row">{{$i++}}</th>
            
-            <td>{{$postal->sub_district}}</td>
+            <td>
+                <a href="{{route('desa.show', [$postal->province_code])}}">{{$postal->sub_district}}</a>
+            </td>
             <td>{{$postal->urban}}</td>
             <td>{{$postal->postal_code}}</td>
         </tr>  

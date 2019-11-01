@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\PostalCOde;
+
 class DesaController extends Controller
 {
     /**
@@ -13,7 +15,9 @@ class DesaController extends Controller
      */
     public function index()
     {
-        //
+        $postalcodes = PostalCode::paginate(1000);
+		
+		return view('desa.index', compact('postalcodes'));
     }
 
     /**
@@ -45,7 +49,9 @@ class DesaController extends Controller
      */
     public function show($id)
     {
-        //
+		$desas = PostalCode::where('province_code', $id)->orderBy('urban', 'desc')->take(100)->get();
+
+		return view('desa.show', compact('desas'));
     }
 
     /**
