@@ -45,11 +45,11 @@ class KodePosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $desa, $kecamatan)
     {
-		$postalcode = PostalCode::where('province_code', $id)->first();
+		$kodepos = PostalCode::where('province_code', $id)->where('urban', $desa)->where('sub_district', $kecamatan)->get();
 		
-		return view('postal.show', compact($postalcode));
+		return view('postal.show',compact('kodepos'));
     }
 
     /**

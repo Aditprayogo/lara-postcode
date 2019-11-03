@@ -39,4 +39,11 @@ Route::get('/desa/{id}/{kecamatan}', [
 	'uses' => 'DesaController@show'
 ]);
 
-Route::resource('kodepos', 'KodePosController');
+Route::resource('kodepos', 'KodePosController')->except([
+	'show',
+]);
+
+Route::get('{id}/{desa}/{kecamatan}', [
+	'as' => 'kodepos.show',
+	'uses' => 'KodePosController@show'
+]);

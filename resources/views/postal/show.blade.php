@@ -14,16 +14,18 @@
     </thead>
 
     <?php $i = 1; ?>
-    <tbody>   
+    <tbody> 
+        @foreach($kodepos as $pos)    
         <tr>
             <th scope="row">{{$i++}}</th>
             <td>
-                {{$postalcode->postal_code}}
+                {{$pos->postal_code}}
             </td>
-            <td>{{$postalcode->urban}}</td>
-            <td>{{$postalcode->sub_district}}</td>
-            <td>{{$postalcode->city}}</td>
-        </tr>   
+            <td>{{$pos->urban}}</td>
+            <td>{{$pos->sub_district}}</td>
+            <td>{{$pos->city}}</td>
+        </tr>  
+        @endforeach   
     </tbody>
 </table>
     
