@@ -47,3 +47,8 @@ Route::get('{id}/{desa}/{kecamatan}', [
 	'as' => 'kodepos.show',
 	'uses' => 'KodePosController@show'
 ]);
+
+Route::get('/home/about', [
+	'as' => 'home.about',
+	'uses' => 'HomeController@about'
+]);

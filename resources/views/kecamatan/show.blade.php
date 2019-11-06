@@ -26,7 +26,8 @@
                 <a href="{{route('desa.show', ['id' => $postal->province_code, 'kecamatan' => $postal->sub_district])}}">{{$postal->sub_district}}</a>
             </td>
             <td>{{$postal->urban}}</td>
-            <td>{{$postal->postal_code}}</td>
+            
+            <td><a href="{{route('kodepos.show', ['id' => $postal->province_code, 'desa' => $postal->urban, 'kecamatan' => $postal->sub_district])}}">{{$postal->postal_code}}</a></td>
         </tr>  
         @endforeach
     </tbody>
