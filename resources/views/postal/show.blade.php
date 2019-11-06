@@ -10,6 +10,7 @@
         <th scope="col">Desa</th>
         <th scope="col">Kecamatan</th>
         <th scope="col">Kota</th>
+        <th scope="col">Provinsi</th>
       </tr>
     </thead>
 
@@ -24,6 +25,7 @@
             <td>{{$pos->urban}}</td>
             <td>{{$pos->sub_district}}</td>
             <td>{{$pos->city}}</td>
+            <td>{{$pos->provinsi->province_name}}</td>
         </tr>  
         @endforeach   
     </tbody>
