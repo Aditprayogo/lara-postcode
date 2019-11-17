@@ -49,8 +49,11 @@ class DesaController extends Controller
      */
     public function show($id, $kecamatan)
     {
+
+		$namakecamatan = str_replace('-',' ',$kecamatan);
+
 		$desas = PostalCode::where('province_code', $id)
-		->where('sub_district', $kecamatan)
+		->where('sub_district', $namakecamatan)
 		->get()
 		->take(1000);
 

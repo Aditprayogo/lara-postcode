@@ -47,7 +47,10 @@ class KodePosController extends Controller
      */
     public function show($id, $desa, $kecamatan)
     {
-		$kodepos = PostalCode::where('province_code', $id)->where('urban', $desa)->where('sub_district', $kecamatan)->get();
+		$namadesa = Str_replace('-',' ',$desa);
+		$namaKecamatan = Str_replace('-',' ', $kecamatan);
+
+		$kodepos = PostalCode::where('province_code', $id)->where('urban', $namadesa)->where('sub_district', $namaKecamatan)->get();
 		
 		return view('postal.show',compact('kodepos'));
     }

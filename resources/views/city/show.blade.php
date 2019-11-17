@@ -22,7 +22,7 @@
         <tr>
             <th scope="row">{{$i++}}</th>
             <td>
-                <a href="{{route('kecamatan.show', ['id' => $postal->province_code, 'cityname' => $postal->city])}}">{{$postal->city}}</a>
+                <a href="{{route('kecamatan.show', ['id' => $postal->province_code, 'cityname' => Str::slug($postal->city)])}}">{{$postal->city}}</a>
             </td>
         </tr>  
         @endforeach

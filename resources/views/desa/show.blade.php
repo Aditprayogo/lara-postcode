@@ -20,7 +20,7 @@
             <th scope="row">{{$i++}}</th>
             <td>{{$postal->urban}}</td>
             <td>
-                <a href="{{route('kodepos.show', ['id' => $postal->province_code, 'desa' => $postal->urban, 'kecamatan' => $postal->sub_district])}}">{{$postal->postal_code}}</a>         
+                <a href="{{route('kodepos.show', ['id' => $postal->province_code, 'desa' => Str::slug($postal->urban), 'kecamatan' => Str::slug($postal->sub_district)])}}">{{$postal->postal_code}}</a>         
             </td>
         </tr>  
         @endforeach

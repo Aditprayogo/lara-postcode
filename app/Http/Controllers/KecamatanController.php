@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\PostalCode;
 use App\Provinsi;
 
+use Illuminate\Support\Str;
+
 class KecamatanController extends Controller
 {
     /**
@@ -54,8 +56,10 @@ class KecamatanController extends Controller
     public function show($id, $cityname)
     {
 
+		$namakota = Str_replace('-', ' ',$cityname);
+
 		$postalcodes = PostalCode::where('province_code', $id)
-		->where('city', $cityname)
+		->where('city', $namakota)
 		->orderBy('urban', 'asc')
 		->take(1000)
 		->get();

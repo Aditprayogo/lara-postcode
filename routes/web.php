@@ -25,7 +25,7 @@ Route::resource('kecamatan', 'KecamatanController')->except([
 	'show',
 ]);
 
-Route::get('/kecamatan/{id}/{cityname}', [
+Route::get('/kecamatan/{id}/{cityname?}', [
 	'as' => 'kecamatan.show',
 	'uses' => 'KecamatanController@show'
 ]);
