@@ -9,6 +9,12 @@ class HomeController extends Controller
     public function about()
 	{
 		# code...
-		return view('about.index');
+		return view('home.about');
+	}
+
+	public function services()
+	{
+		# code...
+		return view('home.services');
 	}
 }

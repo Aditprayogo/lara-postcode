@@ -13,8 +13,11 @@ use App\Provinsi;
 |
 */
 
-Route::get('/', function () {
-    return view('provinsi.index');
+Route::get('/', function (App\Provinsi $provinsis) {
+
+	$provinsis = Provinsi::all();
+	return view('provinsi.index', compact('provinsis'));
+	
 });
 
 Route::resource('provinsi', 'ProvinsiController');
