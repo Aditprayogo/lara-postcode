@@ -13,10 +13,9 @@
 
   <title>lara-postcode</title>
 
-        <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+   <!--     Fonts and icons     -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{ asset('css/material-kit.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('css/material-kit.css.map') }}"> --}}
@@ -44,7 +43,14 @@
     
     <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-sm" color-on-scroll="300" id="sectionsNav" data-spy="affix">
         <div class="container">
-        <a class="navbar-brand" href="/">lara-postcode</a>
+        <a class="navbar-brand" href="/">
+            
+            <div class="logo-big">
+                <img src="{{ asset('img/1200px-Laravel.svg.png') }}" class="img-fluid" width="20" height="20">&nbsp lara-postcode
+            </div>
+            
+        </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -70,7 +76,7 @@
     </nav>
   </div>
 
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ asset('img/bg7.jpg') }}'); transform: translate3d(0px, 0px, 0px); ">
+  <div class="page-header header-filter " data-parallax="true" style="background-image: url('{{ asset('img/bg2.jpg') }}'); transform: translate3d(0px, 0px, 0px); ">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">
@@ -95,6 +101,9 @@
 
         @yield('content')
 
+        <br>
+        
+
       </div>
 
       <!-- Sidebar Widgets Column -->
@@ -115,7 +124,7 @@
 
         <!-- Categories Widget -->
         <div class="card my-4">
-          <h5 class="card-header card-header-danger">Categories</h5>
+          <h5 class="card-header card-header-danger">Categories </h5>
           <div class="card-body">
             <div class="row">
               <div class="col-lg-6">
@@ -147,12 +156,45 @@
 
         <!-- Side Widget -->
         <div class="card my-4">
-          <h5 class="card-header card-header-danger">Lara-postcode</h5>
+          <h5 class="card-header card-header-danger card-header-icon">Lara-postcode</h5>
+          
           <div class="card-body">
             Lara-postcode merupakan website kode pos online yang di buat dengan Framework Laravel dan Bootstrap
           </div>
         </div>
 
+      </div>
+      {{-- end row 4 --}}
+
+      <div class="about-office">
+        <div class="row text-center">
+            <div class="col-md-8 ml-auto mr-auto">
+            <h2 class="title">Our office is our second home</h2>
+            <h4 class="description">Here are some pictures from our office. You can see the place looks like a palace and is fully equiped with everything you need to get the job done.</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-raised rounded img-fluid" alt="Raised Image" src="{{ asset('img/bali.jpg') }}" width="70%">
+            </div>
+            <div class="col-md-4">
+                <img class="img-raised rounded img-fluid" alt="Raised Image" src="{{ asset('img/maluku.jpg') }}" width="70%">
+            </div>
+            <div class="col-md-4">
+                <img class="img-raised rounded img-fluid" alt="Raised Image" src="{{ asset('img/aceh.jpg') }}">
+            </div>
+          
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-raised rounded img-fluid" alt="Raised Image" src="{{ asset('img/maluku2.jpg') }}" width="70%">
+            </div>
+            <div class="col-md-4">
+                <img class="img-raised rounded img-fluid" alt="Raised Image" src="{{ asset('img/danau.jpg') }}" width="100%">
+            </div>
+           
+        </div>
       </div>
 
     </div>
