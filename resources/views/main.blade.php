@@ -13,59 +13,64 @@
 
   <title>lara-postcode</title>
 
-               
-    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> --}}
-
         <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{ asset('css/material-kit.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/material-kit.css.map') }}">
-    <link rel="stylesheet" href="{{ asset('css/material-kit.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/material-kit.css.map') }}"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('css/material-kit.min.css') }}"> --}}
 
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
 
 
 
-  <!-- Custom styles for this template -->
-  <link href="css/blog-home.css" rel="stylesheet">
+  
+
+  <style>
+ 
+  
+  </style>
 
 </head>
+
+
 
 <body class="about-us sidebar-collapse">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
-    <div class="container">
-      <a class="navbar-brand" href="/">lara-postcode</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('provinsi.index')}}">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('home.about')}}">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div class="first-container">
+    
+    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-sm" color-on-scroll="300" id="sectionsNav" data-spy="affix">
+        <div class="container">
+        <a class="navbar-brand" href="/">lara-postcode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('provinsi.index')}}">Home
+                <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('home.about')}}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+  </div>
 
-  <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('{{ asset('img/bg7.jpg') }}'); transform: translate3d(0px, 0px, 0px); ">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ asset('img/bg7.jpg') }}'); transform: translate3d(0px, 0px, 0px); ">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">
@@ -77,6 +82,9 @@
   </div>
 
   <!-- Page Content -->
+  <div class="main main-raised">
+
+  
   <div class="container mt-5">
 
     <hr>
@@ -107,7 +115,7 @@
 
         <!-- Categories Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Categories</h5>
+          <h5 class="card-header card-header-danger">Categories</h5>
           <div class="card-body">
             <div class="row">
               <div class="col-lg-6">
@@ -139,7 +147,7 @@
 
         <!-- Side Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Lara-postcode</h5>
+          <h5 class="card-header card-header-danger">Lara-postcode</h5>
           <div class="card-body">
             Lara-postcode merupakan website kode pos online yang di buat dengan Framework Laravel dan Bootstrap
           </div>
@@ -152,8 +160,11 @@
 
   </div>
   <!-- /.container -->
+  <br>
 
-  <hr>
+</div>
+
+ <hr>
 
   <!-- Footer -->
   <footer class="py-5 bg-danger">
@@ -164,25 +175,47 @@
   </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> --}}
 
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> --}}
 
 
+    <script type="text/javascript"  src="{{ asset('js/core/jquery.min.js') }}"></script>
 
-    <script type="text/javascript" charset="utf8" src="{{ asset('js/core/bootstrap-material-design.min.js') }}"></script>
-    
-    <script type="text/javascript" charset="utf8" src="{{ asset('js/core/pooper.min.js') }}"></script>
-    
-    <script type="text/javascript" charset="utf8" src="{{ asset('js/material-kit.min.js') }}"></script>
-    <script type="text/javascript" charset="utf8" src="{{ asset('js/material-kit.js.map') }}"></script>
-    <script type="text/javascript" charset="utf8" src="{{ asset('js/material-kit.js') }}"></script>
-    
-    <script type="text/javascript" charset="utf8" src="{{ asset('js/plugins/momment.min.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/core/popper.min.js') }}"></script>
+
+    <script type="text/javascript"  src="{{ asset('js/core/bootstrap-material-design.min.js') }}"></script>
     
     
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    {{-- <script type="text/javascript"  src="{{ asset('js/material-kit.min.js') }}"></script> --}}
+    <script type="text/javascript"  src="{{ asset('js/material-kit.js.map') }}"></script>
+
+    <script type="text/javascript"  src="{{ asset('js/material-kit.js?v=2.0.6') }}"></script>
+    
+    <script type="text/javascript"  src="{{ asset('js/plugins/momment.min.js') }}"></script>
+
+    <script type="text/javascript"  src="{{ asset('js/plugins/nouislider.min.js') }}"></script>
+    
+    
+    <script type="text/javascript"  src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+    {{-- <script src="assets/js/material-kit.js?v=2.0.6" type="text/javascript"></script> --}}
+
+
+
+    
+
+    <script type="text/javascript">
+
+        // $('nav').affix({
+        //     offset: {
+        //         top: $('#services').offset().top
+        //     }
+        // });	
+    
+
+    </script>
     
 @yield('scripts')
 
