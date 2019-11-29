@@ -1,5 +1,7 @@
 @extends('main')
 
+
+
 @section('content')
 
 <h1>Daftar Seluruh Provinsi Indonesia</h1>

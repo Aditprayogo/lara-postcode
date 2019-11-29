@@ -50,14 +50,21 @@ class DesaController extends Controller
     public function show($id, $kecamatan)
     {
 
-		$namakecamatan = str_replace('-',' ',$kecamatan);
+		// $entities = array('%21', '%2A', '%27', '%28', '%29', '%3B', '%3A', '%40', '%26', '%3D', '%2B', '%24', '%2C', '%2F', '%3F', '%25', '%23', '%5B', '%5D');
 
-		$desas = PostalCode::where('province_code', $id)
-		->where('sub_district', $namakecamatan)
-		->get()
-		->take(1000);
+		// $replacements = array('!', '*', "'", "(", ")", ";", ":", "@", "&", "=", "+", "$", ",", "/", "?", "%", "#", "[", "]");
 
-		$namaKecamatan = $kecamatan;
+		// $namakecamatan = str_replace($entities,' ',urlencode($slug));
+
+		// $namakecamatan = str_replace('-',' ',$kecamatan);
+
+		$namakecamatan = Str_replace('-', ' ',$kecamatan);
+
+		$desas = PostalCode::where('province_code', $id)->where('sub_district', $namakecamatan)->get()->take(1000);
+
+		// dd($desas);
+
+		$namaKecamatan = $namakecamatan;
 		
 
 		return view('desa.show', compact('desas', 'namaKecamatan'));

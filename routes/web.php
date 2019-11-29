@@ -37,7 +37,7 @@ Route::resource('desa', 'DesaController')->except([
 	'show',
 ]);
 
-Route::get('/desa/{id}/{kecamatan}', [
+Route::get('/desa/{id}/{kecamatan?}', [
 	'as' => 'desa.show',
 	'uses' => 'DesaController@show'
 ]);
@@ -51,7 +51,7 @@ Route::get('{id}/{desa}/{kecamatan}', [
 	'uses' => 'KodePosController@show'
 ]);
 
-Route::get('/home/about', [
+Route::get('/about', [
 	'as' => 'home.about',
 	'uses' => 'HomeController@about'
 ]);
